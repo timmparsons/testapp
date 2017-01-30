@@ -7,6 +7,10 @@ html, body {
   height: 100%;
 }
 
+.navbar-fixed-top {
+	height: 15px;
+}
+
 .carousel-inner {
 	margin-top: 50px;
 	height: 250px;
@@ -18,6 +22,11 @@ html, body {
 
 .carousel-inner img {
   margin: auto;
+}
+
+form {
+	padding-top: 12px;
+	padding-left: 440px;
 }
 
 

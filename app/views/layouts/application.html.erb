@@ -20,7 +20,7 @@
 
   <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container nav_bar">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -32,13 +32,19 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><%= link_to 'Home', root_path %>></li>
+            <li class="active"><%= link_to 'Home', root_path %></li>
             <li><%= link_to "About", static_pages_about_path %></li>
              <li><%= link_to "Store", products_path %></li>
              <li><%= link_to "Contact", static_pages_contact_path %></li>
+             <li><%= form_tag("/products", method: "get") do %>
+              <li><%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search") %>
+            <% end %></li>
           </ul>
         </div><!--/.nav-collapse -->
-      </div>
+
+      </div>      
     </nav>
     <%= yield %>
     
