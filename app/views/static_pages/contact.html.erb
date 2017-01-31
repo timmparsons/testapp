@@ -1,8 +1,8 @@
 <h1>Contact Hit The Lip</h1>
 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
 
- <form class="form-signin">
-<%= form_tag("/static_pages/thank_you") do %>
+ <%= flash[:notice] %>
+ <%= form_tag("/static_pages/thank_you") do %>
 <div class="row">
   <div class="col-md-4">
     <div class="form-group">
@@ -21,4 +21,3 @@
 </div>
 <%= submit_tag "Send" %>   
 <% end %>
-</form>
