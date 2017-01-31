@@ -20,8 +20,13 @@
 
   <body>
 
-   <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+   <% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+    <% end %>
+
+    <% if notice %>
+       <p id="alert" class="alert alert-info"><%= alert %></p>
+    <% end %>
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container nav_bar">
