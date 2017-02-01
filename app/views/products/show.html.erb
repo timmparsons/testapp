@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container product">
-	<div class="row">
-		<div class="col-md-offset-4">
-			  <p>
+<div class="product">
+		  <p>
 			  <strong>Image url:</strong>
 			  <%= @product.image_url %>
 			</p>
@@ -33,9 +31,8 @@
 			 </p>
 
 			  <%= render partial: "new_comment" %>
-		 </div>
+			  <%= will_paginate @comments %>
 	 </div>
- </div>
 
  <%= @product.highest_rating_comment %>
 
