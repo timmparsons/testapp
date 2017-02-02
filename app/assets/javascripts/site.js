@@ -9,9 +9,7 @@ $(document).on('turbolinks:load', function(){
 	//A jQuery image zoom plugin
 	
 	$('.img-zoom').elevateZoom({
-  	zoomType: "inner",
-  	cursor: "crosshair"
-	});
+ 	});
 });
 
 
