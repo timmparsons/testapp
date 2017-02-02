@@ -2,8 +2,7 @@
 
 <div class="product">
 		  <p>
-			  <strong>Image url:</strong>
-			  <%= @product.image_url %>
+			 <%= image_tag(@product.image_url, width: "350", class: "img-zoom img-responsive", data_zoom_image: @product.image_url) %>
 			</p>
 
 			<p>
@@ -30,10 +29,11 @@
 			 	<%= @product.price %>
 			 </p>
 
-			 <%= form_tag "/payments/create" do %>
-			 	<%= hidden_field_tag(:product_id, @product.id) %>
-			 	<%= render partial: "shared/stripe_checkout_button" %>
-			 <% end %>
+			 	<%= form_tag "/payments/create", :id =>"stripe-button" do %>
+				 	<%= hidden_field_tag(:product_id, @product.id) %>
+				 	<%= render partial: "shared/stripe_checkout_button" %>
+				 <% end %>
+			 
 
 			  <%= render partial: "new_comment" %>
 			  <%= render partial: "comments" %>
