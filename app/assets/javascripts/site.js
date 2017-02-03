@@ -1,4 +1,4 @@
-var refreshRating = funtion() {
+var refreshRating = function() {
 	$('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
 	$('.rated').raty({ path: '/assets',
 	readOnly: true,
