@@ -5,9 +5,13 @@
    
   <div class="container-fluid">
     <div class="row">
-       <%= render @products %>
+    	<% cache (cache_key_for_products) do %>
+       		<%= render @products %>
+       	<% end %>
       </div>
   </div>
+  Rails.cache.write("foo", "bar")
+puts Rails.cache.read("foo")
       
 
 
