@@ -1,20 +1,18 @@
+<div class="row">    
+  <div class="col-md-12">
+   <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
 
-    
-        <div class="col-md-12">
-            <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+        <% if current_user && current_user.admin? %>
+         
+   				<%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+    		
+    		  <% end %>
+        </p>
 
-            <% if current_user && current_user.admin? %>
-            <% #if ((can? :destroy, Comment) && (comment.user.id == current_user.id)) || (current_user.admin?) %>
-
-       				<%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
-        		
-        		<% #end %>
-            <% end %>
-            </p>
-
-            <p><div class="rated" id="average-rating" data-score="<%= comment.rating %>"></div></p>
-            <p><%= comment.body %></p>
-            <hr>
-        </div>
+        <p><div class="rated" id="average-rating" data-score="<%= comment.rating %>"></div></p>
+        <p><%= comment.body %></p>
+        <hr>
+  </div>
+</div>
 
         

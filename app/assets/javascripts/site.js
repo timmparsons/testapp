@@ -3,13 +3,13 @@ var refreshRating = function() {
 	$('.rated').raty({ path: '/assets',
 	readOnly: true,
 	score: function() {
-		return $(this).attr('data-score')
+		return $(this).attr('data-score');
 		}
 	});
 };
 
 
-$(document).on('turbolinks:load', function(){
+$(document).on('turbolinks:load ajaxSuccess', function(){
 	refreshRating();
 	$('.img-zoom').elevateZoom();
 	});
