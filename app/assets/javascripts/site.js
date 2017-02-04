@@ -11,11 +11,12 @@ var refreshRating = function() {
 
 $(document).on('turbolinks:load', function(){
 	refreshRating();
+	$('.img-zoom').elevateZoom();
 	});
 	//A jQuery image zoom plugin
 	
-	$('.img-zoom').elevateZoom({
-});
+	
+
 
 
 
