@@ -5,6 +5,7 @@
 			<%= f.label :body, "Comments" %><br>
 			<%= f.text_area :body %>
 		</p>
+		
 		<p>
 			<div class="rating">
 				<%= f.label :rating %><br>
@@ -12,7 +13,12 @@
 			</div>
 		</p>
 		<p>
-			<%= f.submit "Submit" %>
+			<%= f.submit "Submit", class: "btn btn-default" %>
 		</p>
 	<% end %>
+
+	<% else %>
+		<h4><strong>Add a review:</strong></h4>
+		<p>Please login to add a review for this product.</p>
+
 <% end %>

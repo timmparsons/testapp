@@ -37,9 +37,8 @@
 				 	<%= render partial: "shared/stripe_checkout_button" %>
 				 <% end %>
 			 
-
-			  <%= render partial: "new_comment" %>
-			  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+			 <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+			  <%= render partial: "new_comment" %>		 
 			  <%= render partial: "comments" %>
 			  <%= will_paginate @comments %>
 	 </div>
