@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :products do
   resources :comments
   end
-   resources :orders, only: [:index, :show, :create, :destroy]
+  resources :orders, only: [:index, :show, :create, :destroy]
+  post 'payments/create' => 'payments#create'
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -13,8 +15,7 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   post 'static_pages/thank_you'
-
-  post 'payments/create'
+  
 
   root 'static_pages#landing_page'
 
