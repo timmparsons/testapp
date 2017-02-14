@@ -23,11 +23,10 @@ def create
 	    		total: @product.price
 	    		)
 	    	 UserMailer.paid_success(@user, @product).deliver_now
-      end
+	    	 flash[:success] = "Payment was successful."
+	    end
 
-      redirect_to payments_create
-	    
-	    rescue Stripe::CardError => e
+      rescue Stripe::CardError => e
 	    # The card has been declined
 	    body = e.json_body
 	    err = body [:error]
