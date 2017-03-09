@@ -24,11 +24,17 @@ padding-top: 50px;
 }
 
 .go_to_store {
-	position: absolute;
-	margin-top: 15px;
-	color: white;
-	background-color: red;
+	width: 100px;
+	height: 40px;
+	margin-top: 25px;
+	background-color: #F65B59;
 	border: none;
+}
+
+.go_to_store a {
+	font-size: 1.5em;
+	display: inline;
+	color: white;
 }
 
 .hp_head {
